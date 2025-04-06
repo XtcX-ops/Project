@@ -7,4 +7,13 @@ public class Customer {
 	public String phoneNumber;
 	public String address;
 
+	// Constructor
+	public Customer(String customerID, String name, String email, String phoneNumber, String address) {
+		this.customerID = customerID;
+		this.name = name;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+	}
+
 }
