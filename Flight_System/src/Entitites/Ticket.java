@@ -14,4 +14,28 @@ public class Ticket {
 		this.seat = seat;
 	}
 
+	public String getTicketID() {
+		return ticketID;
+	}
+
+	public Flight getFlight() {
+		return flight;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public Seat getSeat() {
+		return seat;
+	}
+
+	public void getTicketDetails() {
+		System.out.println("Ticket ID: " + ticketID);
+		System.out.println("Flight Number: " + flight.getFlightNumber());
+		System.out.println("Customer ID: " + customer.getCustomerID());
+		System.out.println("Seat Number: " + seat.getSeatNumber());
+		System.out.println("Status: " + seat.getStatus());
+	}
+
 }

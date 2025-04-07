@@ -3,12 +3,12 @@ package Entitites;
 import java.util.Date;
 
 public class Flight {
-	public String flightNumber;
-	public String departureCity;
-	public String arrivalCity;
-	public Date departureDate;
-	public Date arrivalDate;
-	public Seat[] seats;
+	private String flightNumber;
+	private String departureCity;
+	private String arrivalCity;
+	private Date departureDate;
+	private Date arrivalDate;
+	private Seat[] seats;
 
 	// Constructor
 	public Flight(String flightNumber, String departureCity, String arrivalCity, Date departureDate, Date arrivalDate,
@@ -19,6 +19,40 @@ public class Flight {
 		this.departureDate = departureDate;
 		this.arrivalDate = arrivalDate;
 		this.seats = new Seat[totalSeats];
+	}
+
+	public String getFlightNumber() {
+		return flightNumber;
+	}
+
+	public String getDepartureCity() {
+		return departureCity;
+	}
+
+	public String getArrivalCity() {
+		return arrivalCity;
+	}
+
+	public Date getDepartureDate() {
+		return departureDate;
+	}
+
+	public Date getArrivalDate() {
+		return arrivalDate;
+	}
+
+	public Seat[] getSeats() {
+		return seats;
+	}
+
+	public int getAvailableSeatCount() {
+		int count = 0;
+		for (Seat seat : seats) {
+			if (seat != null && seat.getStatus().equals("Available")) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 }

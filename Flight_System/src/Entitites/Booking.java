@@ -1,13 +1,13 @@
 package Entitites;
 
 public class Booking {
-	public String bookingID;
-	public String customerID;
-	public String flightNumber;
-	public String seatNumber;
-	public String bookingDate;
-	public String status; // e.g., "confirmed", "cancelled", etc.
-	public double totalPrice; // Total price of the booking
+	private String bookingID;
+	private String customerID;
+	private String flightNumber;
+	private String seatNumber;
+	private String bookingDate;
+	private String status; // e.g., "confirmed", "cancelled", etc.
+	private double totalPrice; // Total price of the booking
 
 	// Constructor
 	public Booking(String bookingID, String customerID, String flightNumber, String seatNumber, String bookingDate,
@@ -19,5 +19,19 @@ public class Booking {
 		this.bookingDate = bookingDate;
 		this.status = status;
 		this.totalPrice = totalPrice;
+	}
+
+	public String getBookingID() {
+		return bookingID;
+	}
+
+	public void getBookingDetails() {
+		System.out.println("Booking ID: " + bookingID);
+		System.out.println("Customer ID: " + customerID);
+		System.out.println("Flight Number: " + flightNumber);
+		System.out.println("Seat Number: " + seatNumber);
+		System.out.println("Booking Date: " + bookingDate);
+		System.out.println("Status: " + status);
+		System.out.println("Total Price: $" + totalPrice);
 	}
 }
