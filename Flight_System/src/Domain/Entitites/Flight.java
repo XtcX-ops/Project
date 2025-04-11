@@ -1,4 +1,4 @@
-package Entitites;
+package Domain.Entitites;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package Entitites;
+package Domain.Entitites;
 
 public class Airport {
 	private String airportCode;

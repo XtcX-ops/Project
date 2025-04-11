@@ -1,4 +1,6 @@
-package Entitites;
+package Domain.Entitites;
+
+import java.util.ArrayList;
 
 public class Customer {
 	private String customerID;
@@ -6,6 +8,7 @@ public class Customer {
 	private String email;
 	private String phoneNumber;
 	private String address;
+	private ArrayList<Booking> bookings;
 
 	// Constructor
 	public Customer(String customerID, String name, String email, String phoneNumber, String address) {
@@ -36,6 +39,10 @@ public class Customer {
 		return address;
 	}
 
+	public ArrayList<Booking> getBookings() {
+		return bookings;
+	}
+
 	public void updateEmail(String newEmail) {
 		this.email = newEmail;
 	}
@@ -46,6 +53,19 @@ public class Customer {
 
 	public void updateAddress(String newAddress) {
 		this.address = newAddress;
+	}
+
+	public void addBooking(Booking booking) {
+		if (bookings == null) {
+			bookings = new ArrayList<Booking>();
+		}
+		bookings.add(booking);
+	}
+
+	public void removeBooking(Booking booking) {
+		if (bookings != null) {
+			bookings.remove(booking);
+		}
 	}
 
 	public void getCustomerDetails() {

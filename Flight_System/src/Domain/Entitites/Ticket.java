@@ -1,4 +1,4 @@
-package Entitites;
+package Domain.Entitites;
 
 public class Ticket {
 	public String ticketID;
